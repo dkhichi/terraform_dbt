@@ -134,7 +134,7 @@ resource "dbt_cloud_job" "OperationSiteAgg_Test3" {
 
     name                 = "OperationSiteAgg_Test3"
 
-    num_threads          = var.environment_id[count.index] == 218665 ? 6 : 4
+    num_threads          = 4
 
     project_id           = 269849
 
