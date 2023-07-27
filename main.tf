@@ -3,7 +3,7 @@ terraform {
 
  backend "gcs" {
 
-  # bucket = "tf-dbtcloud-state"
+  bucket = "tf-dbtcloud-state-1"
 
   prefix = "terraform/state"
 
