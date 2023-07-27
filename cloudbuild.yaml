@@ -5,7 +5,7 @@ steps:
   args:
   - '-c'
   - |
-      terraform init -migrate-state || exit 1
+      terraform init -migrate-state-backend=true || exit 1
 
 - id: 'tf plan'
   name: 'hashicorp/terraform:0.14.3'
