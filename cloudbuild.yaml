@@ -5,7 +5,7 @@ steps:
   args:
   - '-c'
   - |
-      terraform init -backend-config "tf-dbtcloud-state-1" || exit 1
+      terraform init -backend-config "bucket=tf-dbtcloud-state-1" || exit 1
 
 - id: 'tf plan'
   name: 'hashicorp/terraform:0.14.3'
