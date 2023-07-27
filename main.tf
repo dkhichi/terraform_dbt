@@ -1,4 +1,16 @@
 # dbt_cloud_job.test:
+terraform {
+
+ backend "gcs" {
+
+  bucket = "tf-dbtcloud-state"
+
+  prefix = "terraform/state"
+
+ }
+
+}
+
 resource "dbt_cloud_job" "test" {
     deferring_job_id     = 0
     count                = length(var.environment_id)
